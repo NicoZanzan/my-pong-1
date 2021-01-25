@@ -1,0 +1,13 @@
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Motter Tektura", sans-serif;
+    background-color: #ffc62a;
+  }
+
+  h1 {
+      font-size: 2em;
+      font-weight:bolder
+  }
