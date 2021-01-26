@@ -2,16 +2,18 @@ class Paddle {
     constructor(isLeft) {
         
         this.paddleWidth  = paddleWidth
-        this.paddleHeight  =paddleHeight
-        this.xPaddle = xPaddle
-        this.yPaddle  =yPaddle
-        this.phChange = 0
-
+        this.paddleHeight  = paddleHeight
+        this.x 
+        this.y 
+        //this.yChange = 0
+        
         if (isLeft) {
-            this.xPaddle = xPaddle  
+            this.x = paddleWidth  
         } else {
-            this.xPaddle = width - xPaddle -paddleWidth
+            this.x = width - paddleWidth*2
         }
+
+        
 
     }
 
@@ -19,8 +21,17 @@ class Paddle {
         
     }
 
+    movePaddle() {
+        
+        this.y = mouseY // change to paddle1 to only control one 
+        this.y = constrain(this.y, 0, height - this.paddleHeight)
+    }
+
     draw() {
         fill(255,200,255)
-        rect(this.xPaddle, this.yPaddle, this.paddleWidth, this.paddleHeight)
+        stroke(0,255,255)
+        rect(this.x, this.y, this.paddleWidth, this.paddleHeight)
     }
+    
+
 }
