@@ -29,7 +29,7 @@ class Ball {
         
         if (this.y < r || this.y > height - r) {
             this.vy *= - 1
-            console.log('HIT')
+            //console.log('HIT')
         } 
 
         //this.bounceOffPaddle()
@@ -40,21 +40,21 @@ class Ball {
     bounceOffLeftPaddle(p) {
         if (this.x - r < p.x + paddleWidth/2  &&
             this.y + r > p.y - paddleHeight/2 &&
-            this.y - r < p.y + paddleHeight) {
+            this.y - r < p.y + paddleHeight/2) {
                this.vx *= -1.1
                this.vy *= random(-2, 2)
-               console.log('PADDLE HIT')
+               //console.log('PADDLE HIT')
            }
        }
    
        bounceOffRightPaddle(p) {
            if (this.x  > p.x - paddleWidth/2 &&
                this.y - r < p.y + paddleHeight &&
-               this.y + r > p.y - paddleHeight/2) {
+               this.y + r > p.y - paddleHeight) {
                
                    this.vx *= -1.1
                    this.vy *= random(-2, 2)
-                   console.log('PADDLE HIT')
+                   //console.log('PADDLE HIT')
                }
        }
     /*
@@ -88,7 +88,7 @@ class Ball {
             this.vy = random(-3,3)
             this.vx = random(-2,-1)
 
-        }
+        } 
         
     }
 

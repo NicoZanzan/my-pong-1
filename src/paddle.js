@@ -4,26 +4,26 @@ class Paddle {
         this.paddleWidth  = paddleWidth
         this.paddleHeight  = paddleHeight
         this.x 
-        this.y 
-        //this.yChange = 0
+        this.y = height/2 - paddleHeight/2
+        this.vy = 0
         
+
         if (isLeft) {
             this.x = paddleWidth  
         } else {
             this.x = width - paddleWidth*2
         }
 
-        
-
     }
 
     setup() {
+        
         
     }
 
     movePaddle() {
         
-        this.y = mouseY // change to paddle1 to only control one 
+        //this.y = mouseY // change to paddle1 to only control one 
         this.y = constrain(this.y, 0, height - this.paddleHeight)
     }
 

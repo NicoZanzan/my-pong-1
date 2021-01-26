@@ -1,6 +1,3 @@
-// const paddle1 = new Paddle(true) // the isLeft returns true so it stays on the left 
-// const paddle2 = new Paddle(false) // this gives us a right paddle 
-// const ball = new Ball()
 class Court {
 
     constructor() {
@@ -40,7 +37,7 @@ class Court {
         paddle2.draw()
         ball.bounceOffWalls()
         ball.resetBall()
-        
+        //ball.bounceOffPaddle(paddle2.x)
         
 
     }
