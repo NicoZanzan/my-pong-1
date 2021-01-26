@@ -42,6 +42,6 @@ function keyPressed() {
     if (keyCode === 40) {
         paddle2.y += 20
     }
-    
 
 }
+
