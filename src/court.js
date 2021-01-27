@@ -5,7 +5,7 @@ class Court {
         Ball.vx = 0
         Ball.vy = 0
         Ball.score = 0
-        
+
     }
     
     setup() {
@@ -16,6 +16,7 @@ class Court {
         frameRate(100)
         line(width/2, 0, width/2, height)
         circle(width/2, height/2, 50)
+        
         
     }
 
@@ -39,11 +40,13 @@ class Court {
         paddle2.draw()
         ball.bounceOffWalls()
         ball.resetBall()
+        ball.updateScore()
+        ball.updateCPUScore()
+        
         //ball.bounceOffPaddle(paddle2.x)
         
 
     }
 
-    
-    
 }
+

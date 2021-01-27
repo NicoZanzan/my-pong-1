@@ -46,7 +46,8 @@ class Ball {
                this.vx *= -1.1
                this.vy = Math.floor(random(-4, 4))
                this.score ++
-               console.log(this.score)
+               this.updateScore()
+               //console.log(this.score)
                //console.log('PADDLE HIT')
            }
        }
@@ -59,7 +60,8 @@ class Ball {
                    this.vx *= -1.1
                    this.vy = Math.floor(random(-4, 4))
                    this.score ++
-               console.log(this.score)
+                   this.updateScore()
+               //console.log(this.score)
                    //console.log('PADDLE HIT')
                }
        }
@@ -93,14 +95,27 @@ class Ball {
             this.y = height/2
             this.vy = random(-3,3)
             this.vx = 2
+            this.score = 0
             this.cpuScore++
-            if (this.cpuScore === 0) {
+            if (this.cpuScore === 3) {
                 console.log("GAME OVER")
             }
 
         } 
         
     }
+    updateScore() {
+    
+        let playerScore = document.querySelector('.player-score span')
+        //console.log('update score: ', playerScore)
+        playerScore.innerText = this.score
+    }
+
+    updateCPUScore() {
+        let cpuScore = document.querySelector('.CPU-score span')
+        cpuScore.innerText = this.cpuScore
+    }
+
+}
 
     
-}

@@ -17,12 +17,14 @@ function setup() {
     paddle1.vy = 0
     paddle2.vy = 0
     
+    
 }
 
 function draw() {
     court.draw()
     paddle1.y = paddle1.y + paddle1.vy
     paddle2.y = paddle2.y + paddle2.vy
+    
     
 }
 
@@ -60,6 +62,13 @@ function keyReleased() {
         paddle1.vy = 0
     }
 }
+
+
+
+
+
+
+
 
 //voice recognition
 let speech = new p5.SpeechRec()
