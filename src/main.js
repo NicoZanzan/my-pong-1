@@ -26,19 +26,21 @@ function draw() {
     //paddle2.y = paddle2.y + paddle2.vy
     court.checkGameOver()
     court.checkPlayerWin()
-    
+   
     
 }
 
+function refresh() {
+    console.log("connected");
+    window.location.reload()
+}
+
+
+//
 function mousePressed() {
     ball.vx = 3
     ball.vy = 1
 }
-
-// // If Paddle2 goes vs Paddle 1
-// function keyReleased() {
-//     paddle2.movePaddle()
-// }
 
 
 function keyPressed() {
@@ -65,17 +67,6 @@ function keyReleased() {
     }
 }
 
-// function gameOver() {
-//     if (ball.cpuScore === 3) {
-//     ball.x = width/2
-//     ball.y = height/2
-//     ball.vy = 0
-//     ball.vx = 0
-//     ball.score = 0
-//     ball.cpuScore= 0
-//     }
-
-// }
 
 
 
@@ -87,6 +78,7 @@ let speech = new p5.SpeechRec()
 speech.onResult = showResult
 speech.continuous = true
 speech.interimResults = true
+speech.Confidence = 0.01
 
 
 
@@ -115,6 +107,11 @@ function showResult() {
             ball.vx = 3
             ball.vy = 1
         }
+        
+        let bshit = document.getElementById('cpu')
+        bshit.innerText = speech.resultString
     
 }
+
+
     

@@ -55,7 +55,7 @@ class Court {
     }
 
     checkPlayerWin() {
-        if (ball.score === 2) {
+        if (ball.score === 6) {
          let winSign = document.getElementById("winOnTop")
          winSign.style.display = 'block'
          this.resetGame()
@@ -63,9 +63,7 @@ class Court {
     }
 
     resetGame() {
-        // if ((this.checkPlayerWin()=== true ||
-        // this.checkGameOver() === true)) {
-        // }
+
         ball.x = width/2
         ball.y = height/2
         ball.vy = 0

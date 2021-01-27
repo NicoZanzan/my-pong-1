@@ -8,15 +8,18 @@ body {
   }
 
   h1 {
-      font-size: 2em;
+      font-size: 3em;
       font-weight:bolder;
       margin-bottom: 0;
       padding-bottom: 0;
   }
   h3 {
-    font-family: Arial, Helvetica, sans-serif;
+      margin-top: 20;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: italic;
+    font-weight:lighter;
   }
+
 
   .CPU-score span {
       justify-content: center;
@@ -43,6 +46,10 @@ body {
 
  }
 
+ #loseOnTop button {
+     position:absolute;
+ }
+
  #winOnTop {
     display:none;
     opacity:0.8;
@@ -60,3 +67,9 @@ body {
     justify-content: center;
     align-items: center;
 } 
+
+#cpu {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    font-weight:lighter;
+}

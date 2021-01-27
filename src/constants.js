@@ -7,7 +7,7 @@ const r = 10 // radius ball
 
 // paddle //
 let paddleWidth = 10;
-let paddleHeight = 100
+let paddleHeight = 150
 
 
 
