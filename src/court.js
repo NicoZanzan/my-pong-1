@@ -2,9 +2,9 @@ class Court {
 
     constructor() {
         // score 
-        Ball.vx = 0
-        Ball.vy = 0
-        Ball.score = 0
+        // Ball.vx = 0
+        // Ball.vy = 0
+        // Ball.score = 0
 
     }
     
@@ -29,10 +29,6 @@ class Court {
         circle(width/2, height/2, 60)
         paddle1.movePaddle()
         paddle2.movePaddle()
-        
-        paddle1.yPaddle = mouseY; // Y is controlled by the mouse // before text recognition
-        //To lock both paddles 
-        paddle2.yPaddle = mouseY
         ball.draw()
         ball.bounceOffLeftPaddle(paddle1)
         ball.bounceOffRightPaddle(paddle2)
@@ -42,21 +38,41 @@ class Court {
         ball.resetBall()
         ball.updateScore()
         ball.updateCPUScore()
-        
-        //ball.bounceOffPaddle(paddle2.x)
+        this.checkGameOver()
+        this.checkPlayerWin()
         
 
     }
 
-    gameOver() {
-        if (ball.cpuScore === 3) {
+    checkGameOver() {
+        
+        if (ball.cpuScore === 0) {
+        let gameOverSign = document.getElementById("loseOnTop")
+        gameOverSign.style.display = 'block'
+        this.resetGame()
+        
+     }
+    }
+
+    checkPlayerWin() {
+        if (ball.score === 2) {
+         let winSign = document.getElementById("winOnTop")
+         winSign.style.display = 'block'
+         this.resetGame()
+        }
+    }
+
+    resetGame() {
+        // if ((this.checkPlayerWin()=== true ||
+        // this.checkGameOver() === true)) {
+        // }
         ball.x = width/2
         ball.y = height/2
         ball.vy = 0
         ball.vx = 0
         ball.score = 0
-        ball.cpuScore= 0
-        }
+        ball.cpuScore= 3
+    
     }
 
 }

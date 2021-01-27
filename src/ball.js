@@ -65,29 +65,7 @@ class Ball {
                    //console.log('PADDLE HIT')
                }
        }
-    /*
-    bounceOffLeftPaddle(p) {
-        //console.log(p.y, p.x)
-        if (this.y - this.r < p.y + paddleHeight/2 &&
-           this.y + this.r > p.y - paddleHeight/2  &&
-           this.x - this.r < p.x + paddleWidth/2) {
-            console.log('PADDLE')
-            this.vx *= -1
-            this.vy *= -1
-            console.log('HIT')
-           }
-       }
     
-       bounceOffRightPaddle(p) {
-           if (this.y - this.r < p.y + paddleHeight/2 &&
-               this.y + this.r > p.y - paddleHeight/2 &&
-               this.x + this.r > p.x - paddleWidth/2) {
-                   this.vx *=-1
-                   this.vy *= -1
-                   console.log('HIT')
-               }
-       }
-       */
 
     resetBall() { // i can customise the game here 
         if (this.x < - r || this.x > width + r*2) {
@@ -117,9 +95,10 @@ class Ball {
         let cpuScore = document.querySelector('.CPU-score span')
         cpuScore.innerText = this.cpuScore
         if (this.cpuScore === 0) {
-            console.log('game Over')
-        }
+         console.log('game Over')
+        } 
     }
+     
 
 }
 

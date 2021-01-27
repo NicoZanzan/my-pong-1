@@ -21,3 +21,42 @@ body {
   .CPU-score span {
       justify-content: center;
   }
+
+  #loseOnTop { 
+    
+    display:none;
+    opacity:0.8;
+    background-color:#ccc;
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:1000;
+    
+ }
+
+ #loseOnTop img{
+     display:flex;
+     justify-content: center;
+     align-items: center;
+
+ }
+
+ #winOnTop {
+    display:none;
+    opacity:0.8;
+    background-color:#ccc;
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:1000;
+ }
+
+ #winOnTop img {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+} 

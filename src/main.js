@@ -22,15 +22,17 @@ function setup() {
 
 function draw() {
     court.draw()
-    paddle1.y = paddle1.y + paddle1.vy
-    paddle2.y = paddle2.y + paddle2.vy
+    //paddle1.y = paddle1.y + paddle1.vy
+    //paddle2.y = paddle2.y + paddle2.vy
+    court.checkGameOver()
+    court.checkPlayerWin()
     
     
 }
 
 function mousePressed() {
-    ball.vx = -2
-    ball.vy = 0
+    ball.vx = 3
+    ball.vy = 1
 }
 
 // // If Paddle2 goes vs Paddle 1
@@ -110,7 +112,7 @@ function showResult() {
             ball.vy = 0
         }
         if (speech.resultString.includes("tar")) { //START
-            ball.vx = 2
+            ball.vx = 3
             ball.vy = 1
         }
     
