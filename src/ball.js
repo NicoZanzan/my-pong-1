@@ -6,7 +6,7 @@ class Ball {
         this.vy = 0
         this.vx = 0
         this.score = 0
-        this.cpuScore= 0
+        this.cpuScore= 3
         
         this.resetBall()
         
@@ -93,13 +93,12 @@ class Ball {
         if (this.x < - r || this.x > width + r*2) {
             this.x = width/2
             this.y = height/2
-            this.vy = random(-3,3)
-            this.vx = 2
+            this.vy = 0//random(-3,3)
+            this.vx = 0
             this.score = 0
-            this.cpuScore++
-            if (this.cpuScore === 3) {
-                console.log("GAME OVER")
-            }
+            this.cpuScore--
+            this.updateCPUScore()
+            this.updateScore()
 
         } 
         
@@ -109,13 +108,20 @@ class Ball {
         let playerScore = document.querySelector('.player-score span')
         //console.log('update score: ', playerScore)
         playerScore.innerText = this.score
+        if (this.score === 10) {
+            console.log('you win!')
+        }
     }
 
     updateCPUScore() {
         let cpuScore = document.querySelector('.CPU-score span')
         cpuScore.innerText = this.cpuScore
+        if (this.cpuScore === 0) {
+            console.log('game Over')
+        }
     }
 
 }
+
 
     

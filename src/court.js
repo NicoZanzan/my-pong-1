@@ -48,5 +48,16 @@ class Court {
 
     }
 
+    gameOver() {
+        if (ball.cpuScore === 3) {
+        ball.x = width/2
+        ball.y = height/2
+        ball.vy = 0
+        ball.vx = 0
+        ball.score = 0
+        ball.cpuScore= 0
+        }
+    }
+
 }
 
