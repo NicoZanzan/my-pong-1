@@ -3,8 +3,10 @@ class Ball {
     constructor() {
         this.x = width/2
         this.y = height/2
-        this.vy = 10
-        this.vx = 10
+        this.vy = 0
+        this.vx = 0
+        this.score = 0
+        this.cpuScore= 0
         
         this.resetBall()
         
@@ -39,21 +41,25 @@ class Ball {
 
     bounceOffLeftPaddle(p) {
         if (this.x - r < p.x + paddleWidth/2  &&
-            this.y + r > p.y - paddleHeight/2 &&
-            this.y - r < p.y + paddleHeight/2) {
+            this.y -r*2 > p.y - paddleHeight/2 &&
+            this.y - r < p.y + paddleHeight) {
                this.vx *= -1.1
-               this.vy *= random(-2, 2)
+               this.vy = Math.floor(random(-4, 4))
+               this.score ++
+               console.log(this.score)
                //console.log('PADDLE HIT')
            }
        }
    
        bounceOffRightPaddle(p) {
            if (this.x  > p.x - paddleWidth/2 &&
-               this.y - r < p.y + paddleHeight &&
-               this.y + r > p.y - paddleHeight) {
+               this.y  < p.y + paddleHeight &&
+               this.y - r*2 > p.y - paddleHeight/2) {
                
                    this.vx *= -1.1
-                   this.vy *= random(-2, 2)
+                   this.vy = Math.floor(random(-4, 4))
+                   this.score ++
+               console.log(this.score)
                    //console.log('PADDLE HIT')
                }
        }
@@ -86,7 +92,11 @@ class Ball {
             this.x = width/2
             this.y = height/2
             this.vy = random(-3,3)
-            this.vx = random(-2,-1)
+            this.vx = 2
+            this.cpuScore++
+            if (this.cpuScore === 0) {
+                console.log("GAME OVER")
+            }
 
         } 
         

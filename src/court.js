@@ -4,6 +4,8 @@ class Court {
         // score 
         Ball.vx = 0
         Ball.vy = 0
+        Ball.score = 0
+        
     }
     
     setup() {
@@ -11,7 +13,7 @@ class Court {
         background(0)
         stroke(0,255,255)
         smooth()
-        frameRate(40)
+        frameRate(100)
         line(width/2, 0, width/2, height)
         circle(width/2, height/2, 50)
         
