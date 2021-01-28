@@ -36,9 +36,9 @@ function refresh() {
 
 
 function keyPressed() {
-    if (keyCode === 32) {
+    if (keyCode === 83) {
         ball.vx = 3
-        ball.vy = 1 
+        ball.vy = random(-1,1) 
     }
     if (keyCode === 38) {
         console.log('pressed')
@@ -83,7 +83,7 @@ let speech = new p5.SpeechRec()
 speech.onResult = showResult
 speech.continuous = true
 speech.interimResults = true
-speech.Confidence = 0.01
+//speech.Confidence = 0.01
 
 
 
