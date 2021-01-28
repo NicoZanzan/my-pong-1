@@ -37,13 +37,17 @@ function refresh() {
 
 
 //
-function mousePressed() {
-    ball.vx = 3
-    ball.vy = 1
-}
+// function mousePressed() {
+//     ball.vx = 3
+//     ball.vy = 1
+// }
 
 
 function keyPressed() {
+    if (keyCode === 32) {
+        ball.vx = 3
+        ball.vy = 1 
+    }
     if (keyCode === 38) {
         console.log('pressed')
         paddle1.vy -= 5
@@ -84,16 +88,16 @@ speech.Confidence = 0.01
 
 function showResult() {
     console.log(speech.resultString)
-        if (speech.resultString.includes("in")) { // PING
+        if (speech.resultString.includes("in")) { // PING // up 
             paddle1.vy -= 2
             paddle2.vy -= 2
         }
         if (speech.resultString.includes("on") ||
-            speech.resultString.includes("un")) { //PONG
+            speech.resultString.includes("un")) { //PONG // down
             paddle1.vy += 2
             paddle2.vy += 2
         }
-        if (speech.resultString.includes("clear")){ //STOP
+        if (speech.resultString.includes("clear")){ //STOP 
             ball.x = width/2
             ball.y = height/2
             paddle1.vy = 0
@@ -104,8 +108,8 @@ function showResult() {
             ball.vy = 0
         }
         if (speech.resultString.includes("tar")) { //START
-            ball.vx = 3
-            ball.vy = 1
+            ball.vx = 2
+            ball.vy = random(-1,1)
         }
         
         let bshit = document.getElementById('cpu')

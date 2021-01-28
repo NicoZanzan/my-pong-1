@@ -47,8 +47,7 @@ class Ball {
                this.vy = Math.floor(random(-4, 4))
                this.score ++
                this.updateScore()
-               //console.log(this.score)
-               //console.log('PADDLE HIT')
+               
            }
        }
    
@@ -57,18 +56,18 @@ class Ball {
                this.y  < p.y + paddleHeight &&
                this.y - r*2 > p.y - paddleHeight/2) {
                
-                   this.vx *= -1.1
-                   this.vy = Math.floor(random(-4, 4))
-                   this.score ++
-                   this.updateScore()
-               //console.log(this.score)
-                   //console.log('PADDLE HIT')
+                this.vx *= -1.1
+                this.vy = Math.floor(random(-4, 4))
+                this.score ++
+                this.updateScore()
+               
                }
        }
     
 
     resetBall() { // i can customise the game here 
         if (this.x < - r || this.x > width + r*2) {
+
             this.x = width/2
             this.y = height/2
             this.vy = 0//random(-3,3)

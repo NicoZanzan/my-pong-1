@@ -55,7 +55,7 @@ class Court {
     }
 
     checkPlayerWin() {
-        if (ball.score === 6) {
+        if (ball.score === 10) {
          let winSign = document.getElementById("winOnTop")
          winSign.style.display = 'block'
          this.resetGame()

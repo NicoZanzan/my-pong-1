@@ -1,4 +1,4 @@
-const width = 900 //width canvas
+const width = 800 //width canvas
 const height = 400  //height canvas
 
 //ball

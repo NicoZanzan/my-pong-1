@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
     
     <title>PONG!</title>
 </head>
 <body>
-    <h1>PONG!  </h1>
-    <h3> ...AKA how to annoy everyone around you in less than 3 minutes.</h3>
-    <aside class="player-score"> Keep it Poing! <span>0</span> / 10 </aside>
+    <h1>PONG!</h1>
+    <h3 class="sub-header"> ...AKA how to annoy everyone around you in less than 3 minutes.</h3>
+    <section class="scores">
+      <div class="player-score"> Keep it Poing! <span style="color: black;">0</span>/10</div> 
+      <div class="CPU-score"> <span style="color: black;">3</span>/3 lives</div>
+    </section>
     <div id="canvas"></div>
     <div id="loseOnTop">
         <img id="loseOnTop" src="./assets/ezgif.gif" alt="RIP">    
@@ -20,9 +25,32 @@
     <div id="winOnTop">
         <img id="winOnTop" src="./assets/win.jpeg" alt="win">
     </div>
-    <aside class="CPU-score"> <span>3</span> /3 lives left</aside>
-    <div class="words" contenteditable><span> CPU heard: </span><span id="cpu"> </p>
+    <div class="words" contenteditable style="color: deeppink;"><span> CPU heard: </span><span id="cpu" style="color: black;"></p>
+      <div class="create-bt instructions">
+        <button class="bt-instr">click here for instructions</button>
+      </div>
     </div>
+    <section id="create-org">
+
+        <div class="co-section">
+          <h3>Speech Commands</h3>
+          <p>If you want to lose your sanity, 
+           Shout <span style="color: deeppink;">"START!"</span> to begin the game,<span style="color: deeppink;">"PING!"</span> to move the paddles up - and <span style="color: deeppink;">'PONG!'</span> to move them down.To reset, shout<span style="color: deeppink;">"CLEAR!"</span>.</p>
+        </div>
+    
+        <div class="co-section">
+                <h3>Life Goal</h3>
+          <p>If you keep the ball alive till you reach 10 exchanges, you win! If you lose 3 lives, then you clearly have not won. Such is life.
+          </p>
+        </div>
+    
+        <div class="co-section">
+          <h3>Before you punch your laptop...</h3>
+          <p>Not to worry. I got your pong needs sorted. Once you feel like quitting it all and your vocal cords are just sore, just press the <span style="color: deeppink;">UP↑</span> or <span style="color: deeppink;">DOWN↓</span> keys and you may continue ponging till the break of dawn. P.S. CPU will still snitch around, so turn the mic off first. P.P.S. Yes that almost rhymed.</p>
+        </div>
+    
+      </section>
+    
     
     <script src="./src/constants.js"></script>
     <script src="./src/court.js"></script>

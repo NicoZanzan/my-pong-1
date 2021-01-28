@@ -1,4 +1,7 @@
 body {
+    background-image: url(./assets/pingpong2@2x.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -12,15 +15,27 @@ body {
       font-weight:bolder;
       margin-bottom: 0;
       padding-bottom: 0;
+      margin top:0;
   }
-  h3 {
-      margin-top: 20;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-style: italic;
-    font-weight:lighter;
+  .sub-header {
+    margin-top: 0;
+    paddint-top:0;
+    font-family: 'Recursive', sans-serif;
+    
   }
 
+  .scores{
+      display:flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      color:deeppink;
+  }
 
+  .player-score {
+      padding-right: 5%;
+  }
   .CPU-score span {
       justify-content: center;
   }
@@ -46,10 +61,7 @@ body {
 
  }
 
- #loseOnTop button {
-     position:absolute;
- }
-
+ 
  #winOnTop {
     display:none;
     opacity:0.8;
@@ -69,7 +81,57 @@ body {
 } 
 
 #cpu {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Recursive', sans-serif;
     font-style: italic;
-    font-weight:lighter;
+    font: lighter 400;
+}
+
+#create-org {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: baseline;
+  margin: 20px 50px;
+
+}
+
+#create-org h3 {
+    color: deeppink;
+    font-family: "Motter Tektura", sans-serif;
+    display:flex;
+    justify-content:center;
+}
+
+#create-org p {
+   
+    font-family: 'Recursive', sans-serif;
+}
+
+.co-section {
+    padding: 1%;
+    width: 80%;
+  }
+
+  .instructions {
+      display: flex;
+      justify-content: right;
+  }
+
+  .bt-instr{
+    display: flex;
+    justify-content: right;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    font-family: 'Recursive', sans-serif;
+    color: 'deeppink';
+  }
+
+  .bt-instr button:hover,
+button:active {
+  background-color: deeppink;
 }

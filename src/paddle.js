@@ -7,7 +7,7 @@ class Paddle {
         this.y = height/2 - paddleHeight/2
         this.vy = 10
         
-
+        //create the right Paddle
         if (isLeft) {
             this.x = paddleWidth  
         } else {
@@ -28,7 +28,7 @@ class Paddle {
     }
 
     draw() {
-        fill(255,200,255)
+        fill('deeppink')
         stroke(0,255,255)
         rect(this.x, this.y, this.paddleWidth, this.paddleHeight)
         paddle1.y = paddle1.y + paddle1.vy
