@@ -23,7 +23,6 @@ class Paddle {
 
     movePaddle() {
         
-        //this.y = mouseY // change to paddle1 to only control one 
         this.y = constrain(this.y, 0, height - this.paddleHeight)
     }
 

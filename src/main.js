@@ -11,9 +11,6 @@ function setup() {
     speech.start() 
     const canvas = createCanvas(width, height)
     canvas.parent("canvas") 
-    // ball.vx = 0
-    // ball.vy = 0
-    // ball.score = 0
     paddle1.vy = 0
     paddle2.vy = 0
     
@@ -21,8 +18,6 @@ function setup() {
 
 function draw() {
     court.draw()
-    //paddle1.y = paddle1.y + paddle1.vy
-    //paddle2.y = paddle2.y + paddle2.vy
     court.checkGameOver()
     court.checkPlayerWin()
      
@@ -38,7 +33,7 @@ function refresh() {
 function keyPressed() {
     if (keyCode === 83) {
         ball.vx = 3
-        ball.vy = random(-1,1) 
+        ball.vy = -1
     }
     if (keyCode === 38) {
         console.log('pressed')
@@ -110,7 +105,7 @@ function showResult() {
         }
         if (speech.resultString.includes("tar")) { //START
             ball.vx = 2
-            ball.vy = random(-1,1)
+            ball.vy = 1
         }
         
         let bshit = document.getElementById('cpu')

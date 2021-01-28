@@ -31,12 +31,8 @@ class Ball {
         
         if (this.y < r || this.y > height - r) {
             this.vy *= - 1
-            //console.log('HIT')
+            
         } 
-
-        //this.bounceOffPaddle()
-
-        
     }
 
     bounceOffLeftPaddle(p) {
@@ -46,8 +42,7 @@ class Ball {
                this.vx *= -1.1
                this.vy = Math.floor(random(-4, 4))
                this.score ++
-               this.updateScore()
-               
+               this.updateScore()     
            }
        }
    
