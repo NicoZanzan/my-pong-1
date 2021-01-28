@@ -51,10 +51,10 @@ class Ball {
            }
        }
    
-       bounceOffRightPaddle(p) {
-           if (this.x  > p.x - paddleWidth/2 &&
-               this.y  < p.y + paddleHeight &&
-               this.y - r*2 > p.y - paddleHeight/2) {
+    bounceOffRightPaddle(p) {
+        if (this.x  > p.x - paddleWidth/2 &&
+            this.y  < p.y + paddleHeight &&
+            this.y - r*2 > p.y - paddleHeight/2) {
                
                 this.vx *= -1.1
                 this.vy = Math.floor(random(-4, 4))
