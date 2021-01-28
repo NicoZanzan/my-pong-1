@@ -1,12 +1,5 @@
 class Court {
 
-    constructor() {
-        // score 
-        // Ball.vx = 0
-        // Ball.vy = 0
-        // Ball.score = 0
-
-    }
     
     setup() {
         

@@ -17,7 +17,6 @@ function setup() {
     paddle1.vy = 0
     paddle2.vy = 0
     
-    
 }
 
 function draw() {
@@ -26,8 +25,7 @@ function draw() {
     //paddle2.y = paddle2.y + paddle2.vy
     court.checkGameOver()
     court.checkPlayerWin()
-   
-    
+     
 }
 
 function refresh() {
@@ -35,12 +33,6 @@ function refresh() {
     window.location.reload()
 }
 
-
-//
-// function mousePressed() {
-//     ball.vx = 3
-//     ball.vy = 1
-// }
 
 
 function keyPressed() {
@@ -71,7 +63,16 @@ function keyReleased() {
     }
 }
 
-
+function toggleInstructions() {
+    inst = document.getElementById("section-inst");
+    console.log('click')
+    if (inst.style.display === "none") {
+      inst.style.display = "flex"
+        window.scroll(0,300)
+    } else {
+      inst.style.display = "none"
+    }
+  }
 
 
 

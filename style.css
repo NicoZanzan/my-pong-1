@@ -15,11 +15,11 @@ body {
       font-weight:bolder;
       margin-bottom: 0;
       padding-bottom: 0;
-      margin top:0;
+      margin-top:0;
   }
   .sub-header {
-    margin-top: 0;
-    paddint-top:0;
+    margin-top: 10;
+    padding-top:10;
     font-family: 'Recursive', sans-serif;
     
   }
@@ -86,25 +86,25 @@ body {
     font: lighter 400;
 }
 
-#create-org {
-  display: flex;
+#section-inst {
+  display:none;
   justify-content: space-between;
   flex-direction: row;
   align-items: baseline;
-  margin: 20px 50px;
+  padding:20px;
+  margin: 20px 50px 20px 100px;
 
 }
 
-#create-org h3 {
+#section-inst h3 {
     color: deeppink;
     font-family: "Motter Tektura", sans-serif;
     display:flex;
     justify-content:center;
 }
 
-#create-org p {
-   
-    font-family: 'Recursive', sans-serif;
+#section-inst p {
+  font-family: 'Recursive', sans-serif;
 }
 
 .co-section {
@@ -112,26 +112,23 @@ body {
     width: 80%;
   }
 
-  .instructions {
-      display: flex;
-      justify-content: right;
-  }
-
-  .bt-instr{
+.bt-instr{
     display: flex;
     justify-content: right;
     background: none;
     color: inherit;
     border: none;
-    padding: 0;
+    border-radius: 0.25em;
+    padding: 0px,50px,0px,50px;
+    margin: 50px, 50px;
     font: inherit;
     cursor: pointer;
-    outline: inherit;
+    outline: none;
     font-family: 'Recursive', sans-serif;
-    color: 'deeppink';
+    
   }
 
-  .bt-instr button:hover,
+.bt-instr button:hover,
 button:active {
-  background-color: deeppink;
+  color: deeppink;
 }
